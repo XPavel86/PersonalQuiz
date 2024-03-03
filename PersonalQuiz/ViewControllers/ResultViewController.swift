@@ -31,14 +31,14 @@ final class ResultViewController: UIViewController {
 
             if frequentAnswers.count == 1 {
                 if let (animal, _) = frequentAnswers.first {
-                    resultLabel.text! = String("Вы - \(animal.rawValue)!")
+                    resultLabel.text = String("Вы - \(animal.rawValue)!")
                     definitionLabel.text = animal.definition
                 }
             } else {
                 // Сортировка и вывод первого элемента
                 if let (animal, _) = frequentAnswers.sorted(by: {
                     $0.key.rawValue < $1.key.rawValue }).first {
-                    resultLabel.text! = String("Вы - \(animal.rawValue)!")
+                    resultLabel.text = String("Вы - \(animal.rawValue)!")
                     definitionLabel.text = animal.definition
                 }
             }
