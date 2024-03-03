@@ -56,7 +56,7 @@ struct Question {
     case ranged
 }
     
-    struct Answer { // : Hashable
+    struct Answer {
         let title: String
         let animal: Animal
     }
