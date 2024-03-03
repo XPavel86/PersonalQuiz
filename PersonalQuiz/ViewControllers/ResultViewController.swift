@@ -20,7 +20,7 @@ final class ResultViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         if let answerArray = answers {
-            var animalCounts = [Animal: Int]()
+            var animalCounts: [Animal: Int] = [:]
             
             for answer in answerArray {
                 animalCounts[answer.animal, default: 0] += 1
