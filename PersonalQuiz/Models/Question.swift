@@ -37,48 +37,45 @@ struct Question {
             Question (
                 title: "Что вам нравится больше?",
                 type: .ranged, answers: [
-                    Answer (title: "ненавижу", animal: .dog),
-                    Answer (title: "_", animal: .cat),
-                    Answer (title: "_", animal: .rabbit),
-                    Answer(title: "обожаю", animal: .turtle)
+                    Answer (title: "Ненавижу", animal: .dog),
+                    Answer (title: "Нервничаю", animal: .cat),
+                    Answer (title: "Не замечаю", animal: .rabbit),
+                    Answer(title: "Обожаю", animal: .turtle)
                 ]
             )
-            
-            
         ]
     }
-    
 }
 
-    enum ResponseType {
+enum ResponseType {
     case single
     case multiple
     case ranged
 }
+
+struct Answer {
+    let title: String
+    let animal: Animal
+}
+
+enum Animal: Character{
+    case dog = "🐶"
+    case cat = "😸"
+    case rabbit = "🐰"
+    case turtle = "🐢"
     
-    struct Answer {
-        let title: String
-        let animal: Animal
-    }
-    
-    enum Animal: Character{
-        case dog = "🐶"
-        case cat = "😸"
-        case rabbit = "🐰"
-        case turtle = "🐢"
+    var definition: String {
         
-        var definition: String {
-            
-            switch self {
-            case .dog:
-                return "Вам нравится быть с друзьями. Вы окружаете себя людьми, которые вам нравятся и всегда готовы помочь."
-            case .cat:
-                return "Вы себе на уме. Любите гулять сами по себе. Вы цените одиночество."
-            case .rabbit:
-                return "Вам нравится все мягкое. Вы здоровы и полны энергии."
-            case .turtle:
-                return "Ваша сила - в мудрости. Медленный и вдумчивый выигрывает на больших дистанциях."
-            }
+        switch self {
+        case .dog:
+            return "Вам нравится быть с друзьями. Вы окружаете себя людьми, которые вам нравятся и всегда готовы помочь."
+        case .cat:
+            return "Вы себе на уме. Любите гулять сами по себе. Вы цените одиночество."
+        case .rabbit:
+            return "Вам нравится все мягкое. Вы здоровы и полны энергии."
+        case .turtle:
+            return "Ваша сила - в мудрости. Медленный и вдумчивый выигрывает на больших дистанциях."
         }
     }
+}
 
