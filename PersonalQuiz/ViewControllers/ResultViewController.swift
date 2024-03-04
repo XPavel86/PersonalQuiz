@@ -20,7 +20,7 @@ final class ResultViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         if let answers = answers {
-            var animal: Animal? = nil
+            var animal: Animal?
             var duplicate = false
             
             for i in 0..<answers.count {
