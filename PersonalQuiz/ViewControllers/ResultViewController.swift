@@ -48,24 +48,3 @@ final class ResultViewController: UIViewController {
         print("\(type(of: self)) has been deallocated")
     }
 }
-
-
-
-
-/*
- Код ниже, наверное более правильный, с точки зрения надежности. Но если учесть, что массив [Answer] не может быть пустым, то и более короткий вариант не должен вызвать ошибок.
- 
- if frequentAnswers.count == 1 {
- if let (animal, _) = frequentAnswers.first {
- resultLabel.text = "Вы - \(animal.rawValue)!"
- definitionLabel.text = animal.definition
- }
- } else {
- // Сортировка и вывод первого элемента
- if let (animal, _) = frequentAnswers.sorted(by: {
- $0.key.rawValue < $1.key.rawValue }).first {
- resultLabel.text = "Вы - \(animal.rawValue)!"
- definitionLabel.text = animal.definition
- }
- }
- */
